@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.dropdownButton {
+    border: none;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+}
+
+.dropdownButton:hover {
+    border: none;
+}
+
+.downArrow {
+    width: 0.75rem;
+    height: 0.75rem;
+    display: block;
+    overflow: hidden;
+    align-self: center;
+    background: url(../images/icons/downArrow.png) no-repeat center;
+    background-size: contain;
+}
+
+.dropdownItem {
+    padding: 0.75rem;
+}

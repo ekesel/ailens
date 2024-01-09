@@ -1,0 +1,62 @@
+.wrap {
+    width: 100%;
+}
+
+.container {
+    border: 1px solid #DDDDDD;
+    position: relative;
+    width: 1833px;
+    height: 600px;
+}
+
+.tag {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tagText {
+    white-space: normal;
+    font-size: 49px;
+    line-height: 49px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    letter-spacing: -2px;
+    font-family: "Playfair Display";
+    margin-bottom: 35px;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+
+.tagSubText {
+    white-space: normal;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    font-family: "Playfair Display";
+    animation: fadeIn 3s;
+}
+
+.image {
+    width: 1833px;
+    height: 600px;
+    /* Add the blur effect */
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
