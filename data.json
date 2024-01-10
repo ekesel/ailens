@@ -1,0 +1,11 @@
+{
+    "page_title": "AI LENS",
+    "favicon_path": "/favicon.ico",
+    "header": {
+        "title": "AI LENS",
+        "phone": "0129- 12323-123123"
+    },
+    "navbar": ["Home", "About", {
+        "Product": ["PPE Detection", "Zone Management", "Emergency Signal", "Spark, Dust & Gas Monitor"]
+    }, "Contact"]
+}

@@ -3,7 +3,7 @@ import { Link } from "@nextui-org/react";
 import styles from '../styles/header.module.css';
 import AnimatedTextCharacter from './AnimatedTextCharacter';
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
     <section className={styles.topHeader}>
       <div className={styles.container}>
@@ -17,7 +17,7 @@ const Header = () => {
           <div className={styles.rowItem}>
             <div className={`text-center`}>
               <Link href="/index" color='foreground'>
-                <span className={styles.heading}><AnimatedTextCharacter text="AI LENS" staggerRate={0.1} delayRate={0.2} /></span>
+                <span className={styles.heading}><AnimatedTextCharacter text={title} staggerRate={0.1} delayRate={0.2} /></span>
               </Link>
             </div>
           </div>

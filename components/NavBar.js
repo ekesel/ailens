@@ -5,7 +5,7 @@ import {
 import styles from '../styles/navbar.module.css';
 
 
-const NavBar = () => {
+const NavBar = ({items}) => {
 
   return (
     <nav className={`${styles.fill}`}>

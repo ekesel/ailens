@@ -8,8 +8,8 @@
 
 .topHeader .row {
     display: flex;
-    padding: 3rem;
-    justify-content: space-around;
+    padding: 3rem 0;
+    justify-content: space-between;
     align-items: center;
 }
 
