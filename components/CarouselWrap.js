@@ -6,6 +6,7 @@ import { Image } from "@nextui-org/react";
 import one from '../images/slider-1.jpg';
 import two from '../images/slider-2.jpg';
 import three from '../images/slider-3.jpg';
+import AnimatedTextWord from './AnimatedTextWord';
 
 const CarouselWrap = () => {
     const [currentImage, setCurrentImage] = useState(0)
@@ -42,8 +43,12 @@ const CarouselWrap = () => {
             >
                 <div className={styles.container}>
                     <div className={styles.tag}>
-                        <span className={styles.tagText}>AI-enabled Work Place Safety</span>
-                        <span className={styles.tagSubText}>Empowering Tomorrow with AI Today.</span>
+                        <span className={styles.tagText}>
+                            <AnimatedTextWord text={'AI Enabled Work Place Safety'}/>
+                        </span>
+                        <span className={styles.tagSubText}>
+                            <AnimatedTextWord text={'Empowering Tomorrow with AI Today.'}/>
+                        </span>
                     </div>
                     <img src={carouselImages[currentImage]} className={styles.image} />
                 </div>
