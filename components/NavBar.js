@@ -1,11 +1,16 @@
 import React from 'react';
 import {
-  DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Link, Button
+  DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Button
 } from "@nextui-org/react";
 import styles from '../styles/navbar.module.css';
+import Link from 'next/link';
 
 
-const NavBar = ({items}) => {
+const NavBar = () => {
+
+  const scrolltoDiv = (e, div) => {
+    e.scrolltoDiv()
+  }
 
   return (
     <nav className={`${styles.fill}`}>
@@ -27,17 +32,21 @@ const NavBar = ({items}) => {
               </Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="AI Lens Products">
-              <DropdownItem key="ppe_detection" className={styles.dropdownItem}>
-                PPE Detection
+              <DropdownItem key="ppeDetection" className={styles.dropdownItem}>
+                <Link href='#ppe_detection' scroll={false}>
+                PPE Detection</Link>
               </DropdownItem>
-              <DropdownItem key="zone_management" className={styles.dropdownItem}>
-                Zone Management
+              <DropdownItem key="zoneManagement" className={styles.dropdownItem}>
+                <Link href='#zone_management' scroll={false}>
+                Zone Management</Link>
               </DropdownItem>
-              <DropdownItem key="emergency_signal" className={styles.dropdownItem}>
-                Emergency Signal
+              <DropdownItem key="emergencySignal" className={styles.dropdownItem}>
+              <Link href='#emergency_signal' scroll={false}>
+                Emergency Signal</Link>
               </DropdownItem>
-              <DropdownItem key="monitors" className={styles.dropdownItem}>
-                Spark, Dust & Gas Monitor
+              <DropdownItem key="_monitors" className={styles.dropdownItem}>
+              <Link href='#monitors' scroll={false}>
+                Spark, Dust & Gas Monitor</Link>
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>

@@ -1,11 +1,14 @@
 import React from 'react'
 import styles from '../styles/subHeading.module.css'
+import AnimatedTextCharacter from './AnimatedTextCharacter';
+import AnimatedTextWord from './AnimatedTextWord';
 
-const SubHeading = () => {
+const SubHeading = ({subHeadingTitle, subHeadingSubTitle, idKey }) => {
+  
   return (
-    <div className={styles.container}>
-        <span className={styles.title}>OUR PRODUCTS</span>
-        <span className={styles.subtitle}>Elevate your AI experience: explore our suite of virtual solutions.</span>
+    <div className={styles.container} id={idKey}>
+        <span className={styles.title}><AnimatedTextCharacter text={subHeadingTitle} /></span>
+        <span className={styles.subtitle}><AnimatedTextWord text={subHeadingSubTitle} /></span>
     </div>
   )
 }

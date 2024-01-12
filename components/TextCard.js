@@ -1,16 +1,13 @@
 import React from 'react'
 import styles from '../styles/card.module.css';
 
-const TextCard = ({position}) => {
+const TextCard = (props) => {
   return (
-    <div className={position == 'right' ? styles.rightTextCardContainer : ''}>
-        <span className={styles.title}>PPE Detection</span>
-        <p className={styles.description}>AI-Lens uses advanced computer vision techniques for real time monitoring of PPE kit detection. 
-            It enhances workplace safety by automating the identification of 
-            correct gear usage and ensuring compliance, reducing the risk of accidents and injuries.</p>
-        <p className={styles.description}> Detect usage of Personal Fall Arrest System is used (PFAS) like a 
-        full body harness for wok-sites that are situated at heights along with other anti-fall protective gear. </p>
-        <p  className={styles.description}>The compliance of head-mounted industrial PPE by using deep learning object detectors</p>
+    <div className={props?.position == 'right' ? styles.rightTextCardContainer : styles.leftTextCardContainer}>
+        <span className={styles.title}>{props?.textCardTitle}</span>
+        <p className={styles.description}>{props?.textCardp1}</p>
+        {props?.textCardp2 &&<p className={styles.description}>{props?.textCardp2}</p>}
+        {props?.textCardp3 && <p className={styles.description}>{props?.textCardp3}</p>}
     </div>
   )
 }

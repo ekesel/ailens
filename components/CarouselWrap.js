@@ -1,21 +1,11 @@
 import React, { useState } from 'react';
 import styles from '../styles/carousel.module.css';
 import Carousel from 'react-material-ui-carousel';
-import { Image } from "@nextui-org/react";
-
-import one from '../images/slider-1.jpg';
-import two from '../images/slider-2.jpg';
-import three from '../images/slider-3.jpg';
 import AnimatedTextWord from './AnimatedTextWord';
 
-const CarouselWrap = () => {
+const CarouselWrap = ({ carouselImages }) => {
     const [currentImage, setCurrentImage] = useState(0)
 
-    const carouselImages = [
-        one?.src,
-        two?.src,
-        three?.src
-    ];
 
     const moveCarousel = (direction) => {
         if (direction == 'next') {

@@ -3,7 +3,7 @@ import { Link } from "@nextui-org/react";
 import styles from '../styles/header.module.css';
 import AnimatedTextCharacter from './AnimatedTextCharacter';
 
-const Header = ({ title }) => {
+const Header = ({ title, phone, location }) => {
   return (
     <section className={styles.topHeader}>
       <div className={styles.container}>
@@ -11,7 +11,7 @@ const Header = ({ title }) => {
           <div className={styles.rowItem}>
             <div className={styles.rowItemWrap}>
               <div className={styles.telephone}></div>
-              <span><AnimatedTextCharacter text="0129- 12323-123123" staggerRate={0.03} delayRate={0.04} /></span>
+              <span><AnimatedTextCharacter text={phone} staggerRate={0.03} delayRate={0.04} /></span>
             </div>
           </div>
           <div className={styles.rowItem}>
@@ -23,8 +23,8 @@ const Header = ({ title }) => {
           </div>
           <div className={styles.rowItem}>
             <div className={styles.rowItemWrap}>
-              <div className={styles.search}></div>
-              <span><AnimatedTextCharacter text="Search" staggerRate={0.2} delayRate={0.23} /></span>
+              <div className={styles.location}></div>
+              <span><AnimatedTextCharacter text={location} staggerRate={0.2} delayRate={0.23} /></span>
             </div>
           </div>
         </div>

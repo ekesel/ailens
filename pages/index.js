@@ -6,9 +6,9 @@ import SubHeading from '../components/SubHeading';
 import CardSet from '../components/CardSet';
 
 import data from '../data.json';
+import Footer from '../components/Footer';
 
 export default function Home() {
-
   return (
     <div>
       <Head>
@@ -17,11 +17,16 @@ export default function Home() {
       </Head>
       <Header title={data?.header?.title}
         phone={data?.header?.phone}
+        location={data?.header?.location}
        />
-      <NavBar items={data?.navbar} />
-      <CarouselWrap />
-      <SubHeading />
-      <CardSet mediaType={'video'} />
+      <NavBar />
+      <CarouselWrap carouselImages={data?.carouselImages} />
+      <SubHeading subHeadingSubTitle={data?.subHeadingSubTitle} subHeadingTitle={data?.subHeadingTitle} idKey={data?.subHeadingKey} />
+      <CardSet data={data?.cardset1} key={data?.key} />
+      <CardSet data={data?.cardset2} key={data?.key} />
+      <CardSet data={data?.cardset3} key={data?.key} />
+      <CardSet data={data?.cardset4} key={data?.key} />
+      <Footer />
     </div>
   );
 }
