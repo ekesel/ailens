@@ -52,5 +52,42 @@
         "textCardp1": "Let AI-LENS help you to detect and respond to spark, dust, and gas hazards in real-time, enhancing safety and environmental monitoring",
         "textCardp2": "AI-based spark, dust, and gas detection systems offer enhanced safety, accuracy, and efficiency in industrial settings, reducing risks and costs while improving overall operational performance.",
         "textCardp3": "These systems are a crucial component of modern safety measures in industries where such hazards are prevalent."
+    },
+    "about_us_title": "About",
+    "about_us_subtitle": "Please reach us at aivision@ai-lens.ai to know us better!",
+    "aboutCard1": {
+        "key": "what_is_ai_lens",
+        "textCardTitle": "What is AI-LENS?",
+        "textCardp1": "Employing sophisticated algorithms, we intricately enhance safety compliance measures, ensuring a notable improvement in overall workplace safety across industries like manufacturing, construction, and mining.",
+        "textCardp2":"These advanced systems contribute to a heightened level of operational safety, adhering rigorously to regulations and minimizing risks in diverse work environments."
+    },
+    "aboutCard2": {
+        "key": "what_service_ai_lens",
+        "textCardTitle": "What services does AI-LENS offer?",
+        "textCardp1": "AI-LENS can provide safety solutions in a wide range of industries, helping to enhance worker safety, protect assets, and prevent accidents.",
+        "textCardp2": "In various industries such as manufacturing, construction, and oil and gas, the integration of artificial intelligence has proven instrumental in enhancing safety measures and operational efficiency. In manufacturing, AI systems monitor equipment for malfunctions, ensure worker safety compliance, and optimize production processes to minimize workplace accidents.",
+        "textCardp3": "Similarly, in construction, AI analyzes sites for safety compliance, identifies potential hazards, and tracks the movement of workers and heavy machinery to prevent accidents. In the oil and gas sector, AI technologies monitor pipelines, drilling operations, and refineries for safety adherence, detect gas leaks, and predict equipment failures, thereby preempting catastrophic accidents."
+    },
+    "aboutCard3": {
+        "key": "what_sets_apart_ai_lens",
+        "textCardTitle": "What sets AI-LENS apart from its competitors?",
+        "textCardp1": "By seamlessly integrating with existing cameras within facilities, AI-LENS  enabling early identification of potential hazards and preventing incidents before they occur."
+    },
+    "contact": {
+        "key": "contact_form",
+        "title": "We welcome your questions & ideas",
+        "field1Name": "Name",
+        "field1Placeholder": "Enter your Name",
+        "field2Name": "Email",
+        "field2Placeholder": "Enter your Email",
+        "field3Name": "Message",
+        "field3Placeholder": "Enter your Message",
+        "submitText": "Send Message",
+        "responseTitle": "Thank You!",
+        "responseText": "We will get back to you within 24 hours at the email address you have provided.",
+        "responseSubmit": "Great!",
+        "errorBtnText": "Try Again :(",
+        "errorTitle": "Uh - Oh!",
+        "errorText": "We encountered some error while sending your thoughts, Try Again or mail us at aivision@ai-lens.ai"
     }
 }

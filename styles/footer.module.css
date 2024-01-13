@@ -119,6 +119,85 @@
     color: #fff;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #fff;
+  gap: 0.5rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contactSuccess {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 300px;
+}
+
+.contactTitle {
+  font-size: 1.5rem;
+}
+
+.contactForm {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.contactInputLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+.contactResponseText { 
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.contactInput {
+  background-color: #000;
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.contactInput::selection {
+  border: none;
+}
+
+.contactSubmit {
+  display: flex;
+  justify-content: center;
+}
+
+.submitBtn {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem;
+}
+
+.footerNavBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes animateWaves {
   0% {
     background-position-x: 1000px;

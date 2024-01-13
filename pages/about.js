@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
-import CarouselWrap from '../components/CarouselWrap';
 import SubHeading from '../components/SubHeading';
-import CardSet from '../components/CardSet';
 
 import data from '../data.json';
 import Footer from '../components/Footer';
+import Card from '../components/Card';
 
 export default function Home() {
   return (
@@ -20,12 +19,10 @@ export default function Home() {
         location={data?.header?.location}
        />
       <NavBar />
-      <CarouselWrap carouselImages={data?.carouselImages} />
-      <SubHeading subHeadingSubTitle={data?.subHeadingSubTitle} subHeadingTitle={data?.subHeadingTitle} idKey={data?.subHeadingKey} />
-      <CardSet data={data?.cardset1} key={data?.cardset1?.key} />
-      <CardSet data={data?.cardset2} key={data?.cardset2?.key} />
-      <CardSet data={data?.cardset3} key={data?.cardset3?.key} />
-      <CardSet data={data?.cardset4} key={data?.cardset4?.key} />
+      <SubHeading subHeadingSubTitle={data?.about_us_subtitle} subHeadingTitle={data?.about_us_title} idKey={"about_us_page"} />
+      <Card data={data?.aboutCard1} key={data?.aboutCard1?.key} />
+      <Card data={data?.aboutCard2} key={data?.aboutCard2?.key} />
+      <Card data={data?.aboutCard3} key={data?.aboutCard3?.key} />
       <Footer contactData={data?.contact} />
     </div>
   );

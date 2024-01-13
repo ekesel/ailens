@@ -15,8 +15,8 @@ const NavBar = () => {
   return (
     <nav className={`${styles.fill}`}>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><Link href="/">Home</Link></li>
+        <li><Link href="/about" prefetch={true}>About</Link></li>
         <li>
           <Dropdown>
             <DropdownTrigger>
@@ -28,7 +28,7 @@ const NavBar = () => {
                   outline: 'none',
                 }}
               >
-                <a href="#">Products</a>
+                <a href="/#products">Products</a>
               </Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="AI Lens Products">
@@ -51,7 +51,7 @@ const NavBar = () => {
             </DropdownMenu>
           </Dropdown>
         </li>
-        <li><a href="#">Contact</a></li>
+        <li><Link href="/#contact_form" scroll={false}>Contact</Link></li>
       </ul>
     </nav>
   )

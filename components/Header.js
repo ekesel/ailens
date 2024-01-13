@@ -16,7 +16,7 @@ const Header = ({ title, phone, location }) => {
           </div>
           <div className={styles.rowItem}>
             <div className={`text-center`}>
-              <Link href="/index" color='foreground'>
+              <Link href="/" color='foreground'>
                 <span className={styles.heading}><AnimatedTextCharacter text={title} staggerRate={0.1} delayRate={0.2} /></span>
               </Link>
             </div>
