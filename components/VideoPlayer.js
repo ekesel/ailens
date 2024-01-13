@@ -1,12 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 
 const VideoPlayer = ({ videosrc }) => {
+    const [isTabView, setIsTabView] = useState(false)
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(min-device-width: 768px)')
+        if (mediaQuery.matches) {
+            setIsTabView(true)
+        }
+        else
+            setIsTabView(false)
+      }, [])
 
     return (
         <div>
             <ReactPlayer
-                width={'22rem'}
+                width={isTabView ? '15rem' : '22rem'}
                 height={'400px'}
                 url={videosrc}
                 controls={false}

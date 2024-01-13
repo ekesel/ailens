@@ -8,7 +8,7 @@ const SubHeading = ({subHeadingTitle, subHeadingSubTitle, idKey }) => {
   return (
     <div className={styles.container} id={idKey}>
         <span className={styles.title}><AnimatedTextCharacter text={subHeadingTitle} /></span>
-        <span className={styles.subtitle}><AnimatedTextWord text={subHeadingSubTitle} /></span>
+        <span className={styles.subTitle}><AnimatedTextWord text={subHeadingSubTitle} /></span>
     </div>
   )
 }

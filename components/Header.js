@@ -11,7 +11,7 @@ const Header = ({ title, phone, location }) => {
           <div className={styles.rowItem}>
             <div className={styles.rowItemWrap}>
               <div className={styles.telephone}></div>
-              <span><AnimatedTextCharacter text={phone} staggerRate={0.03} delayRate={0.04} /></span>
+              <span className={styles.mobileText}><AnimatedTextCharacter text={phone} staggerRate={0.03} delayRate={0.04} /></span>
             </div>
           </div>
           <div className={styles.rowItem}>
@@ -24,7 +24,7 @@ const Header = ({ title, phone, location }) => {
           <div className={styles.rowItem}>
             <div className={styles.rowItemWrap}>
               <div className={styles.location}></div>
-              <span><AnimatedTextCharacter text={location} staggerRate={0.2} delayRate={0.23} /></span>
+              <span className={styles.mobileText}><AnimatedTextCharacter text={location} staggerRate={0.2} delayRate={0.23} /></span>
             </div>
           </div>
         </div>

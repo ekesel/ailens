@@ -31,7 +31,7 @@ const CardSet = ({ data }) => {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
     >
-      <div id={data?.key}>
+      <div id={data?.key} className={styles.tabContainer}>
         <motion.div className={styles.container} variants={cardVariants}>
           {data?.mediaCardPosition == 'left' && <><div className={styles.left}>
             {domLoaded && <MediaCard type={data?.mediaCardType} src={data?.mediaCardSrc} position={'left'} />}

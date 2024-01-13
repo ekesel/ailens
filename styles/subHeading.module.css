@@ -19,3 +19,14 @@
     letter-spacing: 0.025em;
     font-weight: 400;
 }
+
+/* mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .subTitle {
+        font-size: 0.7rem;
+    }
+    .container {
+        padding: 2.5rem 0 4rem 0;
+        margin-bottom: 5rem;
+    }
+}
