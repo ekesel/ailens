@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
+import styles from '../styles/card.module.css';
 
 const VideoPlayer = ({ videosrc }) => {
     const [domLoaded, setDomLoaded] = useState(false);
@@ -21,8 +22,6 @@ const VideoPlayer = ({ videosrc }) => {
     return (
         <div>
             <ReactPlayer
-                width={isTabView ? '15rem' : '22rem'}
-                height={'400px'}
                 url={videosrc}
                 controls={false}
                 light={false}
@@ -30,6 +29,7 @@ const VideoPlayer = ({ videosrc }) => {
                 muted
                 playsInline
                 playing
+                className={styles.videoPlayer}
             />
             <source src={videosrc} type="video/mp4" />
         </div>

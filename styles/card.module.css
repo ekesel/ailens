@@ -57,6 +57,11 @@
     font-weight: 400;
 }
 
+.videoPlayer {
+    width: 22rem !important;
+    height: 400px !important;
+}
+
 /* single card css */
 .cardContainer {
     display: flex;
@@ -107,6 +112,9 @@
         margin-left: 15%;
         margin-right: 15%;
     }
+    .videoPlayer {
+        width: 18rem !important;
+    }
 }
 
 /* mobile */
@@ -122,7 +130,7 @@
     .left {
         min-width: unset;
         margin-top: unset;
-        padding: 2rem;
+        padding: 2rem 0;
     }
 
     .leftCard {
@@ -131,6 +139,7 @@
 
     .rightCard {
         width: unset;
+        float: unset;
     }
 
     .tabContainer {
@@ -156,6 +165,7 @@
     .leftTextCardContainer {
         margin-right: unset;
         margin-top: unset;
+        padding: 1rem;
     }
 
     .rightTextCardContainer {
@@ -168,5 +178,8 @@
     .mediaWrap {
         display: flex;
         justify-content: center;
+    }
+    .videoPlayer {
+        width: 18rem !important;
     }
 }

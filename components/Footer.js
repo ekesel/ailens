@@ -15,7 +15,8 @@ const Footer = ({ contactData, socialMedia }) => {
 
     const contactSubmit = () => {
         setLoading(true)
-        emailjs.sendForm('service_yccr9l9', 'template_ylbxkou', form.current, 'Q5XUJuNrqxlaHUEEz')
+        if(contactName && contactMsg && contactEmail) {
+            emailjs.sendForm('service_yccr9l9', 'template_ylbxkou', form.current, 'Q5XUJuNrqxlaHUEEz')
             .then((result) => {
                 setFormSubmitted(true)
                 setLoading(false)
@@ -24,6 +25,11 @@ const Footer = ({ contactData, socialMedia }) => {
                 setLoading(false)
                 console.log(error);
             });
+        }  
+        else {
+            setFormError(true);
+            setLoading(false)
+        }
     }
 
     const clearState = () => {
@@ -137,25 +143,25 @@ const Footer = ({ contactData, socialMedia }) => {
                     <div className={styles.iconRow}>
                         <div className={styles.iconRowItem}>
                             <div className={styles.rowItemWrap}>
-                                <Link href={socialMedia?.linkedIn}><div className={styles.linkedIn}></div>
+                                <Link href={socialMedia?.linkedIn} rel="noopener noreferrer" target="_blank"><div className={styles.linkedIn}></div>
                                 </Link>
                             </div>
                         </div>
                         <div className={styles.iconRowItem}>
                             <div className={styles.rowItemWrap}>
-                                <Link href={socialMedia?.twitter}><div className={styles.twitter}></div>
+                                <Link href={socialMedia?.twitter} rel="noopener noreferrer" target="_blank"><div className={styles.twitter}></div>
                                 </Link>
                             </div>
                         </div>
                         <div className={styles.iconRowItem}>
                             <div className={styles.rowItemWrap}>
-                                <Link href={socialMedia?.facebook}><div className={styles.facebook}></div>
+                                <Link href={socialMedia?.facebook} rel="noopener noreferrer" target="_blank"><div className={styles.facebook}></div>
                                 </Link>
                             </div>
                         </div>
                         <div className={styles.iconRowItem}>
                             <div className={styles.rowItemWrap}>
-                                <Link href={socialMedia?.instagram}><div className={styles.instagram}></div>
+                                <Link href={socialMedia?.instagram} rel="noopener noreferrer" target="_blank"><div className={styles.instagram}></div>
                                 </Link>
                             </div>
                         </div>
@@ -165,10 +171,9 @@ const Footer = ({ contactData, socialMedia }) => {
                         <li className={styles.menu__item}><Link className={styles.menu__link} href="/about" prefetch={true}>About</Link></li>
                         <li className={styles.menu__item}>
                             <Link className={styles.menu__link} href="/#products" scroll={false}>Products</Link></li>
-                        <li className={styles.menu__item}><Link className={styles.menu__link} href="/#contact_form" scroll={false}>Contact</Link></li>
                     </ul>
                     <p className={styles.copyright}>&copy; 2024 AI Lens | All Rights Reserved</p>
-                    <p className={styles.credits}>Site Developed By <Link href={'https://www.linkedin.com/in/ekesel/'}>@ekesel</Link></p>
+                    <p className={styles.credits}>Site Developed By <Link href={'https://www.linkedin.com/in/ekesel/'} rel="noopener noreferrer" target="_blank">@ekesel</Link></p>
                 </div>
             </div>
         </footer>

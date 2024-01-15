@@ -4,7 +4,7 @@ import MediaCard from './MediaCard';
 import TextCard from "./TextCard";
 import { motion } from "framer-motion";
 
-const CardSet = ({ data }) => {
+const CardSet = ({ data, position }) => {
   const [domLoaded, setDomLoaded] = useState(false);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const CardSet = ({ data }) => {
     >
       <div id={data?.key} className={styles.tabContainer}>
         <motion.div className={styles.container} variants={cardVariants}>
-          {data?.mediaCardPosition == 'left' && <><div className={styles.left}>
+          {position== 'left' && <><div className={styles.left}>
             {domLoaded && <MediaCard type={data?.mediaCardType} src={data?.mediaCardSrc} position={'left'} />}
           </div>
             <div className={styles.right} >
@@ -44,7 +44,7 @@ const CardSet = ({ data }) => {
                 textCardp3={data?.textCardp3}
               />
             </div></>}
-          {data?.mediaCardPosition == 'right' && <><div className={styles.left}>
+          {position == 'right' && <><div className={styles.left}>
             <TextCard position={'left'}
               textCardTitle={data?.textCardTitle}
               textCardp1={data?.textCardp1}

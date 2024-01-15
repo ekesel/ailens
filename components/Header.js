@@ -16,7 +16,7 @@ const Header = ({ title, phone, location, socialMedia }) => {
           </div>
           <div className={styles.rowItem}>
             <div>
-              <Link href="/" color='foreground'>
+              <Link href="/" color='foreground' rel="noopener noreferrer" target="_blank">
                 <span className={styles.heading}><AnimatedTextCharacter text={title} staggerRate={0.1} delayRate={0.2} /></span>
               </Link>
             </div>
@@ -31,25 +31,25 @@ const Header = ({ title, phone, location, socialMedia }) => {
         <div className={styles.iconRow}>
           <div className={styles.iconRowItem}>
             <div className={styles.rowItemWrap}>
-              <Link href={socialMedia?.linkedIn}><div className={styles.linkedIn}></div>
+              <Link href={socialMedia?.linkedIn} rel="noopener noreferrer" target="_blank"><div className={styles.linkedIn}></div>
               </Link>
             </div>
           </div>
           <div className={styles.iconRowItem}>
             <div className={styles.rowItemWrap}>
-              <Link href={socialMedia?.twitter}><div className={styles.twitter}></div>
+              <Link href={socialMedia?.twitter} rel="noopener noreferrer" target="_blank"><div className={styles.twitter}></div>
               </Link>
             </div>
           </div>
           <div className={styles.iconRowItem}>
             <div className={styles.rowItemWrap}>
-              <Link href={socialMedia?.facebook}><div className={styles.facebook}></div>
+              <Link href={socialMedia?.facebook} rel="noopener noreferrer" target="_blank"><div className={styles.facebook}></div>
               </Link>
             </div>
           </div>
           <div className={styles.iconRowItem}>
             <div className={styles.rowItemWrap}>
-              <Link href={socialMedia?.instagram}><div className={styles.instagram}></div>
+              <Link href={socialMedia?.instagram} rel="noopener noreferrer" target="_blank"><div className={styles.instagram}></div>
               </Link>
             </div>
           </div>
