@@ -29,19 +29,19 @@ const NavBar = () => {
             </DropdownTrigger>
             <DropdownMenu aria-label="AI Lens Products">
               <DropdownItem key="ppeDetection" className={styles.dropdownItem}>
-                <Link href='#ppe_detection' scroll={false}>
+                <Link href='/#ppe_detection' scroll={false}>
                 PPE Detection</Link>
               </DropdownItem>
               <DropdownItem key="zoneManagement" className={styles.dropdownItem}>
-                <Link href='#zone_management' scroll={false}>
+                <Link href='/#zone_management' scroll={false}>
                 Zone Management</Link>
               </DropdownItem>
               <DropdownItem key="emergencySignal" className={styles.dropdownItem}>
-              <Link href='#emergency_signal' scroll={false}>
+              <Link href='/#emergency_signal' scroll={false}>
                 Emergency Signal</Link>
               </DropdownItem>
               <DropdownItem key="_monitors" className={styles.dropdownItem}>
-              <Link href='#monitors' scroll={false}>
+              <Link href='/#monitors' scroll={false}>
                 Spark, Dust & Gas Monitor</Link>
               </DropdownItem>
             </DropdownMenu>
