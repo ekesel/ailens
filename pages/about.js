@@ -17,13 +17,15 @@ export default function Home() {
       <Header title={data?.header?.title}
         phone={data?.header?.phone}
         location={data?.header?.location}
+        socialMedia={data?.header?.socialMedia}
        />
       <NavBar />
       <SubHeading subHeadingSubTitle={data?.about_us_subtitle} subHeadingTitle={data?.about_us_title} idKey={"about_us_page"} />
       <Card data={data?.aboutCard1} key={data?.aboutCard1?.key} />
       <Card data={data?.aboutCard2} key={data?.aboutCard2?.key} />
       <Card data={data?.aboutCard3} key={data?.aboutCard3?.key} />
-      <Footer contactData={data?.contact} />
+      <Footer contactData={data?.contact} 
+        socialMedia={data?.header?.socialMedia} />
     </div>
   );
 }
