@@ -77,15 +77,15 @@
 }
 
 .fill ul li a:hover {
-    color: #fff;
+    color: #fff !important;
     z-index: 1;
 }
 
 .fill ul li a:hover:after {
     z-index: -10;
-    animation: fill 1s forwards;
-    -webkit-animation: fill 1s forwards;
-    -moz-animation: fill 1s forwards;
+    animation: fill 0.5s forwards;
+    -webkit-animation: fill 0.5s forwards;
+    -moz-animation: fill 0.5s forwards;
     opacity: 1;
 }
 

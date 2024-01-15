@@ -24,7 +24,7 @@ const NavBar = () => {
                   outline: 'none',
                 }}
               >
-                <span className={styles.products}>Products</span>
+                <a className={styles.products}>Products</a>
               </Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="AI Lens Products">
