@@ -8,10 +8,6 @@ import Link from 'next/link';
 
 const NavBar = () => {
 
-  const scrolltoDiv = (e, div) => {
-    e.scrolltoDiv()
-  }
-
   return (
     <nav className={`${styles.fill}`}>
       <ul>
