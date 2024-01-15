@@ -4,7 +4,13 @@
     "header": {
         "title": "AI LENS",
         "phone": "+1 818 731 7253",
-        "location": "Bangalore, KA"
+        "location": "Bangalore, KA",
+        "socialMedia": {
+            "linkedIn": "https://www.linkedin.com/feed/",
+            "twitter": "https://www.x.com/",
+            "facebook": "https://www.facebook.com/",
+            "instagram": "https://www.instagram.com/"
+        }
     },
     "carouselImages": [
         "/images/slider-1.jpg",

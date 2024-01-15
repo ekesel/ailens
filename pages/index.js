@@ -18,6 +18,7 @@ export default function Home() {
       <Header title={data?.header?.title}
         phone={data?.header?.phone}
         location={data?.header?.location}
+        socialMedia={data?.header?.socialMedia}
        />
       <NavBar />
       <CarouselWrap carouselImages={data?.carouselImages} />
@@ -26,7 +27,7 @@ export default function Home() {
       <CardSet data={data?.cardset2} key={data?.cardset2?.key} />
       <CardSet data={data?.cardset3} key={data?.cardset3?.key} />
       <CardSet data={data?.cardset4} key={data?.cardset4?.key} />
-      <Footer contactData={data?.contact} />
+      <Footer contactData={data?.contact} socialMedia={data?.header?.socialMedia} />
     </div>
   );
 }

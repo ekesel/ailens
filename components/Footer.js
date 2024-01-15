@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 
-const Footer = ({ contactData }) => {
+const Footer = ({ contactData, socialMedia }) => {
     const [contactName, setContactName] = useState('');
     const [contactEmail, setContactEmail] = useState('');
     const [contactMsg, setContactMsg] = useState('');
@@ -52,10 +52,10 @@ const Footer = ({ contactData }) => {
                             <button
                                 className={styles.submitBtn}
                                 type="submit"
-                                onClick={(e)=> {
+                                onClick={(e) => {
                                     e.preventDefault();
                                     clearState();
-                                }}  
+                                }}
                             >
                                 {loading ? 'Sending..' : contactData?.responseSubmit}
                             </button>
@@ -69,71 +69,97 @@ const Footer = ({ contactData }) => {
                             <button
                                 className={styles.submitBtn}
                                 type="submit"
-                                onClick={(e)=> {
+                                onClick={(e) => {
                                     e.preventDefault();
                                     clearState();
-                                }}  
+                                }}
                             >
                                 {loading ? 'Sending..' : contactData?.errorBtnText}
                             </button>
                         </div>
                     </div>
-                </div> : 
-                <div className={styles.contact}>
-                    <span className={styles.contactTitle}>{contactData?.title}</span>
-                    <form
-                        className={styles.contactForm}
-                        ref={form}
-                    >
-                        <div className={styles.contactInputLabel}>
-                            <label htmlFor={'from_name'}>{contactData?.field1Name}</label>
-                            <input
-                                type="text"
-                                placeholder={contactData?.field1Placeholder}
-                                name={'from_name'}
-                                id={contactData?.field1Name}
-                                className={styles.contactInput}
-                                onChange={(e) => setContactName(e.target.value)}
-                                value={contactName}
-                            />
-                        </div>
-                        <div className={styles.contactInputLabel}>
-                            <label htmlFor={'reply_to'}>{contactData?.field2Name}</label>
-                            <input
-                                type="email"
-                                placeholder={contactData?.field2Placeholder}
-                                name={'reply_to'}
-                                className={styles.contactInput}
-                                required
-                                onChange={(e) => setContactEmail(e.target.value)}
-                                value={contactEmail}
-                            />
-                        </div>
-                        <div className={styles.contactInputLabel}>
-                            <label htmlFor={'message'}>{contactData?.field3Name}</label>
-                            <textarea
-                                placeholder={contactData?.field3Placeholder}
-                                name={'message'}
-                                className={styles.contactInput}
-                                onChange={(e) => setContactMsg(e.target.value)}
-                                value={contactMsg}
-                            />
-                        </div>
-                        <div className={styles.contactSubmit}>
-                            <button
-                                className={styles.submitBtn}
-                                type="submit"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    contactSubmit()
-                                }}
-                            >
-                                {loading ? 'Sending..' : contactData?.submitText}
-                            </button>
-                        </div>
-                    </form>
-                </div>)}
+                </div> :
+                    <div className={styles.contact}>
+                        <span className={styles.contactTitle}>{contactData?.title}</span>
+                        <form
+                            className={styles.contactForm}
+                            ref={form}
+                        >
+                            <div className={styles.contactInputLabel}>
+                                <label htmlFor={'from_name'}>{contactData?.field1Name}</label>
+                                <input
+                                    type="text"
+                                    placeholder={contactData?.field1Placeholder}
+                                    name={'from_name'}
+                                    id={contactData?.field1Name}
+                                    className={styles.contactInput}
+                                    onChange={(e) => setContactName(e.target.value)}
+                                    value={contactName}
+                                />
+                            </div>
+                            <div className={styles.contactInputLabel}>
+                                <label htmlFor={'reply_to'}>{contactData?.field2Name}</label>
+                                <input
+                                    type="email"
+                                    placeholder={contactData?.field2Placeholder}
+                                    name={'reply_to'}
+                                    className={styles.contactInput}
+                                    required
+                                    onChange={(e) => setContactEmail(e.target.value)}
+                                    value={contactEmail}
+                                />
+                            </div>
+                            <div className={styles.contactInputLabel}>
+                                <label htmlFor={'message'}>{contactData?.field3Name}</label>
+                                <textarea
+                                    placeholder={contactData?.field3Placeholder}
+                                    name={'message'}
+                                    className={styles.contactInput}
+                                    onChange={(e) => setContactMsg(e.target.value)}
+                                    value={contactMsg}
+                                />
+                            </div>
+                            <div className={styles.contactSubmit}>
+                                <button
+                                    className={styles.submitBtn}
+                                    type="submit"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        contactSubmit()
+                                    }}
+                                >
+                                    {loading ? 'Sending..' : contactData?.submitText}
+                                </button>
+                            </div>
+                        </form>
+                    </div>)}
                 <div className={styles.footerNavBar}>
+                    <div className={styles.iconRow}>
+                        <div className={styles.iconRowItem}>
+                            <div className={styles.rowItemWrap}>
+                                <Link href={socialMedia?.linkedIn}><div className={styles.linkedIn}></div>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={styles.iconRowItem}>
+                            <div className={styles.rowItemWrap}>
+                                <Link href={socialMedia?.twitter}><div className={styles.twitter}></div>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={styles.iconRowItem}>
+                            <div className={styles.rowItemWrap}>
+                                <Link href={socialMedia?.facebook}><div className={styles.facebook}></div>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={styles.iconRowItem}>
+                            <div className={styles.rowItemWrap}>
+                                <Link href={socialMedia?.instagram}><div className={styles.instagram}></div>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                     <ul className={styles.menu}>
                         <li className={styles.menu__item}><Link className={styles.menu__link} href="/">Home</Link></li>
                         <li className={styles.menu__item}><Link className={styles.menu__link} href="/about" prefetch={true}>About</Link></li>
@@ -141,7 +167,7 @@ const Footer = ({ contactData }) => {
                             <Link className={styles.menu__link} href="/#products" scroll={false}>Products</Link></li>
                         <li className={styles.menu__item}><Link className={styles.menu__link} href="/#contact_form" scroll={false}>Contact</Link></li>
                     </ul>
-                    <p className={styles.copyright}>&copy;2024 AI Lens | All Rights Reserved</p>
+                    <p className={styles.copyright}>&copy; 2024 AI Lens | All Rights Reserved</p>
                     <p className={styles.credits}>Site Developed By <Link href={'https://www.linkedin.com/in/ekesel/'}>@ekesel</Link></p>
                 </div>
             </div>

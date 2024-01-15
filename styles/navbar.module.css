@@ -89,6 +89,10 @@
     opacity: 1;
 }
 
+.products {
+    text-transform: uppercase;
+}
+
 /* Keyframes */
 @keyframes fill {
     0% {

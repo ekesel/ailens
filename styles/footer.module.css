@@ -122,9 +122,10 @@
 .container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
   color: #fff;
   gap: 0.5rem;
+  min-height: 400px;
 }
 
 .contact {
@@ -198,6 +199,54 @@
   align-items: center;
 }
 
+.iconRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  gap: 2rem;
+}
+
+.linkedIn {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  overflow: hidden;
+  align-self: center;
+  background: url(../images/icons/linkedin-original.png) no-repeat center;
+  background-size: contain;
+}
+
+.twitter {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  overflow: hidden;
+  align-self: center;
+  background: url(../images/icons/twitter-original.png) no-repeat center;
+  background-size: contain;
+}
+
+.facebook {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  overflow: hidden;
+  align-self: center;
+  background: url(../images/icons/facebook-original.png) no-repeat center;
+  background-size: contain;
+}
+
+.instagram {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  overflow: hidden;
+  align-self: center;
+  background: url(../images/icons/instagram-original.png) no-repeat center;
+  background-size: contain;
+}
+
 @keyframes animateWaves {
   0% {
     background-position-x: 1000px;
@@ -237,5 +286,6 @@
   }
   .menu {
     flex-wrap: unset;
+    margin-left: -10%;
   }
 }
