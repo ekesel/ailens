@@ -58,7 +58,19 @@
 /* mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .tagText {
-        font-size: 23px;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .tagSubText {
+        font-size: 10px;
+    }
+    
+}
+
+/* tablet */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .tagText {
+        font-size: 25px;
         margin-bottom: 25px;
     }
     .tagSubText {

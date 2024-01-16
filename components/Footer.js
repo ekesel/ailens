@@ -173,7 +173,7 @@ const Footer = ({ contactData, socialMedia }) => {
                             <Link className={styles.menu__link} href="/#products" scroll={false}>Products</Link></li>
                     </ul>
                     <p className={styles.copyright}>&copy; 2024 AI Lens | All Rights Reserved</p>
-                    <p className={styles.credits}>Site Developed By <Link href={'https://www.linkedin.com/in/ekesel/'} rel="noopener noreferrer" target="_blank">@ekesel</Link></p>
+                    <p className={styles.credits}>Site Developed By <Link href={'https://www.linkedin.com/in/ekesel/'} rel="noopener noreferrer" target="_blank">@ekesel</Link> and <Link href={'https://www.linkedin.com/in/aryanagr/'} rel="noopener noreferrer" target="_blank">@aryanagr</Link></p>
                 </div>
             </div>
         </footer>

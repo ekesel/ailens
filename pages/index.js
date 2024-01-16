@@ -37,9 +37,9 @@ export default function Home() {
       <CarouselWrap carouselImages={data?.carouselImages} />
       <SubHeading subHeadingSubTitle={data?.subHeadingSubTitle} subHeadingTitle={data?.subHeadingTitle} idKey={data?.subHeadingKey} />
       <CardSet data={data?.cardset1} position={isMobileView ? 'right' : data?.cardset1?.mediaCardPosition} />
-      <CardSet data={data?.cardset2} position={isMobileView ? 'right' : data?.cardset1?.mediaCardPosition} />
-      <CardSet data={data?.cardset3} position={isMobileView ? 'right' : data?.cardset1?.mediaCardPosition} />
-      <CardSet data={data?.cardset4} position={isMobileView ? 'right' : data?.cardset1?.mediaCardPosition} />
+      <CardSet data={data?.cardset2} position={isMobileView ? 'right' : data?.cardset2?.mediaCardPosition} />
+      <CardSet data={data?.cardset3} position={isMobileView ? 'right' : data?.cardset3?.mediaCardPosition} />
+      <CardSet data={data?.cardset4} position={isMobileView ? 'right' : data?.cardset4?.mediaCardPosition} />
       <Footer contactData={data?.contact} socialMedia={data?.header?.socialMedia} />
     </div>
   );
