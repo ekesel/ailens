@@ -4,7 +4,7 @@ import MediaCard from './MediaCard';
 import TextCard from "./TextCard";
 import { motion } from "framer-motion";
 
-const CardSet = ({ data, position }) => {
+const CardSet = ({ data, position, productLink }) => {
   const [domLoaded, setDomLoaded] = useState(false);
 
   useEffect(() => {
@@ -32,6 +32,7 @@ const CardSet = ({ data, position }) => {
       viewport={{ once: true, amount: 0.8 }}
     >
       <div id={data?.key} className={styles.tabContainer}>
+        <a href={productLink} target="blank">
         <motion.div className={styles.container} variants={cardVariants}>
           {position== 'left' && <><div className={styles.left}>
             {domLoaded && <MediaCard type={data?.mediaCardType} src={data?.mediaCardSrc} position={'left'} />}
@@ -56,6 +57,7 @@ const CardSet = ({ data, position }) => {
               {domLoaded && <MediaCard type={data?.mediaCardType} src={data?.mediaCardSrc} position={'right'} />}
             </div></>}
         </motion.div>
+        </a>
       </div>
     </motion.div>
   )
