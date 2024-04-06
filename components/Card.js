@@ -29,7 +29,7 @@ const Card = ({ data }) => {
                 <motion.div className={styles.cardContainer} variants={cardVariants}>
                     <span className={styles.cardTitle}>{data?.card_title}</span>
                     <div className={styles.cardBody}>
-                        <TextCard position={'center'}
+                        <TextCard position={data?.position}
                             textCardTitle={data?.textCardTitle}
                             textCardp1={data?.textCardp1}
                             textCardp2={data?.textCardp2}
